@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, Outlet } from "react-router-dom";
 import "./Card.css"
-function Card({ title, imageSource, descripcion, }) {
+function Card({ title, imageSource, descripcion, nombre_boton, enlace}) {
 
     return (
         <div className='card text-center'>
@@ -13,7 +13,7 @@ function Card({ title, imageSource, descripcion, }) {
                 <h4 className='card-title'>{title}</h4>
                 <p>{descripcion}</p>
                 <Outlet/>
-                <Link to={`/domiciles`} className='btn btn-outline-info'>Ir al restaurante</Link>
+                <Link to={enlace} className='btn btn-outline-info'>{nombre_boton}</Link>
                 
             </div>
         </div>

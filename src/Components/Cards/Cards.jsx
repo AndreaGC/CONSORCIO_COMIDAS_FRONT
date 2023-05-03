@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from './Card'
+import { Link, Outlet } from "react-router-dom";
 import imagen1 from '../../Assets/img/Maria_Jose_Parrilla.png'
 import imagen2 from '../../Assets/img/descarga.jpeg'
 import imagen3 from '../../Assets/img/Burger_King.jpeg'
@@ -59,7 +60,7 @@ function Cards() {
         {
           resturantes.map(resturante => (
             <div className="col-md-4" key={resturante.id}>
-              <Card title={resturante.nom_rest} imageSource={resturante.img} descripcion={resturante.desc}/>
+              <Card title={resturante.nom_rest} imageSource={resturante.img} descripcion={resturante.desc} nombre_boton= "Ir al restaurante" enlace={`/domiciles`}/>
             </div>
           ))
         }
